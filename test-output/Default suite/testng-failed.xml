@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.ictak.testCases.LoginTest">
+      <class name="org.ictak.testCases.AdminTest">
         <methods>
+          <include name="addAdminUser_TC_24"/>
+          <include name="editUserAdmin_TC_26"/>
           <include name="init"/>
-          <include name="validTrainingHeadLogin"/>
+          <include name="adminTask_backtoDashboard_TC_35"/>
+          <include name="deleteAdmin_TC_26"/>
         </methods>
-      </class> <!-- org.ictak.testCases.LoginTest -->
+      </class> <!-- org.ictak.testCases.AdminTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

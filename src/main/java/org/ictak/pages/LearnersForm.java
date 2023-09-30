@@ -136,6 +136,16 @@ public class LearnersForm extends PageBase {
 		elmnt.click();
 	}
 
+	public String getEmptyFieldError() {
+		WebElement elmnt = driver.findElement(By.xpath("//p[@class='fw-light fst-italic text-start text-danger']"));
+		return elmnt.getText();
+	}
+	
+	public void clickBackDashb() {
+		WebElement elmnt = driver.findElement(By.xpath("//button[@class='btn btn-warning']"));
+		elmnt.click();
+	}
+	
 	@Override
 	public String toString() {
 		return "LearnersForm [learnerId=" + learnerId + ", name=" + name + ", course=" + course + ", project=" + project

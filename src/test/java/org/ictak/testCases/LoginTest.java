@@ -17,7 +17,7 @@ public class LoginTest extends TestBase {
 
 	@Test(priority = 0)
 
-	public void validAdminLogin() {
+	public void validAdminLogin_TC_2() {
 
 		Navigator objLearDashBoard = new Navigator(driver);
 		Login log;
@@ -25,6 +25,7 @@ public class LoginTest extends TestBase {
 			log = Util.setLoginFields(driver, 0);
 
 			log.loginclick();
+			Util.sleepForMilliSec(2000);
 			String actualResult = objLearDashBoard.getUserTitle();
 			System.out.println("This is Actual Result : " + actualResult);
 			Assert.assertEquals(actualResult, Constant.USERS);
@@ -44,9 +45,8 @@ public class LoginTest extends TestBase {
 	}
 
 	@Test(priority = 1)
-	public void verifyValidAdminAndInvalidPasswd() {
+	public void verifyValidAdminAndInvalidPasswd_TC_3() {
 
-		Navigator objDashboard = new Navigator(driver);
 		try {
 			Login log = Util.setLoginFields(driver, 3);
 			log.loginclick();
@@ -68,7 +68,7 @@ public class LoginTest extends TestBase {
 
 	@Test(priority = 2)
 
-	public void validTrainingHeadLogin() {
+	public void validTrainingHeadLogin_TC_10() {
 
 		Navigator objLearDashBoard = new Navigator(driver);
 		Login log;
@@ -97,7 +97,7 @@ public class LoginTest extends TestBase {
 	
 	@Test(priority = 3)
 
-	public void validPlacementOfficerogin() {
+	public void validPlacementOfficerLogin_TC_17() {
 
 		Navigator objLearDashBoard = new Navigator(driver);
 		Login log;

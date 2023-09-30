@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\prase\AppData\Local\Temp\testng-eclipse-76465523\testng-customsuite.xml</span>
+                    <span>C:\Users\prase\AppData\Local\Temp\testng-eclipse--592512197\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.ictak.testCases.AdminTest" class="method navigator-link" hash-for-method="addAdminUser_TC_24">addAdminUser_TC_24</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.ictak.testCases.AdminTest" class="method navigator-link" hash-for-method="adminTask_backtoDashboard_TC_35">adminTask_backtoDashboard_TC_35</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.ictak.testCases.AdminTest" class="method navigator-link" hash-for-method="deleteAdmin_TC_26">deleteAdmin_TC_26</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.ictak.testCases.AdminTest" class="method navigator-link" hash-for-method="editUserAdmin_TC_26">editUserAdmin_TC_26</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictak.testCases.TrainingHead" class="method navigator-link" hash-for-method="trainingHeadAddLearnerInvalidName_TC_38">trainingHeadAddLearnerInvalidName_TC_38</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,35 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">org.ictak.testCases.AdminTest</span>
+              <span class="class-name">org.ictak.testCases.TrainingHead</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addAdminUser_TC_24">
-                  </a> <!-- addAdminUser_TC_24 -->
-                  <span class="method-name">addAdminUser_TC_24</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="adminTask_backtoDashboard_TC_35">
-                  </a> <!-- adminTask_backtoDashboard_TC_35 -->
-                  <span class="method-name">adminTask_backtoDashboard_TC_35</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteAdmin_TC_26">
-                  </a> <!-- deleteAdmin_TC_26 -->
-                  <span class="method-name">deleteAdmin_TC_26</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="editUserAdmin_TC_26">
-                  </a> <!-- editUserAdmin_TC_26 -->
-                  <span class="method-name">editUserAdmin_TC_26</span>
+                  <a name="trainingHeadAddLearnerInvalidName_TC_38">
+                  </a> <!-- trainingHeadAddLearnerInvalidName_TC_38 -->
+                  <span class="method-name">trainingHeadAddLearnerInvalidName_TC_38</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\prase\AppData\Local\Temp\testng-eclipse-76465523\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\prase\AppData\Local\Temp\testng-eclipse--592512197\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.ictak.testCases.AdminTest&quot;/&gt;
+      &lt;class name=&quot;org.ictak.testCases.TrainingHead&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;trainingHeadAddLearnerInvalidName_TC_38&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- org.ictak.testCases.TrainingHead --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -221,23 +189,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editUserAdmin_TC_26')
-data.setCell(0, 2, 'org.ictak.testCases.AdminTest')
-data.setCell(0, 3, 41281);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteAdmin_TC_26')
-data.setCell(1, 2, 'org.ictak.testCases.AdminTest')
-data.setCell(1, 3, 39234);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addAdminUser_TC_24')
-data.setCell(2, 2, 'org.ictak.testCases.AdminTest')
-data.setCell(2, 3, 14258);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'adminTask_backtoDashboard_TC_35')
-data.setCell(3, 2, 'org.ictak.testCases.AdminTest')
-data.setCell(3, 3, 13687);
+data.setCell(0, 1, 'trainingHeadAddLearnerInvalidName_TC_38')
+data.setCell(0, 2, 'org.ictak.testCases.TrainingHead')
+data.setCell(0, 3, 108373);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -257,9 +213,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">org.ictak.testCases.TrainingHead</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">trainingHeadBulkUpdate_TC_42</span>
+                <br/>
+                <span class="ignored-method-name">trainingHeadAddLearnerBlankProject_TC_41</span>
+                <br/>
+                <span class="ignored-method-name">trainingHeadAddLearner_TC_34</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -268,26 +235,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.ictak.testCases.AdminTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.ictak.testCases.TrainingHead</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">addAdminUser_TC_24</span>
-                <span class="method-start">7102 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">adminTask_backtoDashboard_TC_35</span>
-                <span class="method-start">21367 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">editUserAdmin_TC_26</span>
-                <span class="method-start">35061 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">deleteAdmin_TC_26</span>
-                <span class="method-start">76345 ms</span>
+                <span class="method-name">trainingHeadAddLearnerInvalidName_TC_38</span>
+                <span class="method-start">5533 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
