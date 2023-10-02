@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class AdminTest extends TestBase {
 
-	@Test(priority = 0)
+	@Test(priority = 5)
 	public void addAdminUser_TC_24() throws IOException {
 		Navigator objLearDashBoard = new Navigator(driver);
 		Login log = Util.setLoginFields(driver, 0);
@@ -55,7 +55,7 @@ public class AdminTest extends TestBase {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 6)
 	public void adminTask_backtoDashboard_TC_35() throws IOException {
 		Navigator objLearDashBoard = new Navigator(driver);
 		Login log = Util.setLoginFields(driver, 0);
@@ -88,8 +88,8 @@ public class AdminTest extends TestBase {
 
 	}
 
-	@Test(priority = 2)
-	public void editUserAdmin_TC_26() throws IOException {
+	@Test(priority = 7)
+	public void editUserAdmin_TC_25() throws IOException {
 
 		Login log = Util.setLoginFields(driver, 0);
 		log.loginclick();
@@ -123,7 +123,7 @@ public class AdminTest extends TestBase {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 8)
 	public void deleteAdmin_TC_26() throws IOException {
 
 		Login log = Util.setLoginFields(driver, 0);

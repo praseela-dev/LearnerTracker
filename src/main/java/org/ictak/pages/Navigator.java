@@ -1,10 +1,14 @@
 package org.ictak.pages;
 
+import java.time.Duration;
+
 import org.ictak.constants.Constant;
 import org.ictak.utilities.Util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 
 public class Navigator extends PageBase {
@@ -14,7 +18,9 @@ public class Navigator extends PageBase {
 	}
 
 	public String getUserTitle() {
-		return driver.findElement(By.className("item-content")).getText();
+//		WebElement element = driver.findElement(By.className("item-content"));
+		WebElement element = Util.waitUntilVisible(driver, By.className("item-content"));
+		return element.getText();
 
 	}
 

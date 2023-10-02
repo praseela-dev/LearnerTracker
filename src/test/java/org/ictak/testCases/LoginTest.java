@@ -50,12 +50,15 @@ public class LoginTest extends TestBase {
 		try {
 			Login log = Util.setLoginFields(driver, 3);
 			log.loginclick();
-			String actualResult = log.getError();
-			System.out.println("This is Actual Result : " + actualResult);
-			Assert.assertEquals(actualResult, Constant.LOGINFAILED);
+
+			String actualResult1 = log.getError();
+			System.out.println("This is Actual Result : " + actualResult1);
+			Assert.assertEquals(actualResult1, Constant.LOGINFAILED);
 
 			Thread.sleep(4000);
-			log.clickError();
+			log.closeError();
+			log.clearUserName();
+			log.clearPassword();
 
 			System.out.println("Returned back to Login");
 
@@ -93,8 +96,7 @@ public class LoginTest extends TestBase {
 		}
 
 	}
-	
-	
+
 	@Test(priority = 3)
 
 	public void validPlacementOfficerLogin_TC_17() {
@@ -117,6 +119,32 @@ public class LoginTest extends TestBase {
 			objLearDashBoard.logout();
 
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Test(priority = 4)
+	public void verifyBlankAdminAndValidPasswd_TC_6() {
+
+		try {
+			Login log = new Login(driver);
+			System.out.println("*****Its launched*******");
+			String Password = ExcelUtility.getData(6, 1);
+			log.setPassword(Password);
+
+			log.loginclick();
+			Thread.sleep(2000);
+			String actualResult = log.getEmptyTextBoxError();
+			System.out.println("This is Actual Result : " + actualResult);
+			Assert.assertEquals(actualResult, Constant.USERNAME_REQUIRED);
+
+			Thread.sleep(2000);
+			log.closeError();
+			log.clearPassword();
+
+		} catch (IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

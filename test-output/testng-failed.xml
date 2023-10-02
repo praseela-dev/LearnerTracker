@@ -6,9 +6,9 @@
       <class name="org.ictak.testCases.AdminTest">
         <methods>
           <include name="addAdminUser_TC_24"/>
-          <include name="editUserAdmin_TC_26"/>
           <include name="init"/>
           <include name="adminTask_backtoDashboard_TC_35"/>
+          <include name="editUserAdmin_TC_25"/>
           <include name="deleteAdmin_TC_26"/>
         </methods>
       </class> <!-- org.ictak.testCases.AdminTest -->

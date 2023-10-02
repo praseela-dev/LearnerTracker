@@ -12,8 +12,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PlacementOfficer extends TestBase{
-	@Test(priority = 0)
-
+	
+	@Test(priority = 9)
 	public void updatePlacementStatus_TC_46() {
 
 		Navigator objDashBoard = new Navigator(driver);
@@ -28,17 +28,11 @@ public class PlacementOfficer extends TestBase{
 
 			Thread.sleep(2000);
 			Placement objPlacement = objDashBoard.placement();
-			LearnersForm objFoarm = objPlacement.findLerner(ExcelUtility.getTestData(1, "TC_46", 1));
+			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_46", 1), false); 
 			objFoarm.navigateToEdit();
 			objFoarm.setPlacementStatus(ExcelUtility.getTestData(1, "TC_46", 2));
 
 			objFoarm.clickSubmit();
-
-//			Assert.assertEquals(Util.getMessage(driver), Constant.SUCESS_MSG);
-//
-//			Util.sleepForMilliSec(2000);
-//			Util.presOK(driver);
-//			Util.sleepForMilliSec(2000);
 
 			objDashBoard.logout();
 

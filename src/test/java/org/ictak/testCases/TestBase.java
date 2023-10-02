@@ -16,13 +16,12 @@ import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-	 public static WebDriver driver;
-	 public static Properties properties;
-	 
-	 public TestBase()
-	 {
-		 properties = new Properties();
-		 File file = new File(System.getProperty("user.dir") + "/src/main/resources/config.properties");
+	public static WebDriver driver;
+	public static Properties properties;
+
+	public TestBase() {
+		properties = new Properties();
+		File file = new File(System.getProperty("user.dir") + "/src/main/resources/config.properties");
 		try {
 			FileInputStream inputStream = new FileInputStream(file);
 			properties.load(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
@@ -39,8 +38,8 @@ public class TestBase {
 	public void init() {
 
 		String browser = properties.getProperty("browser");
-		
-		browser=browser.toLowerCase();
+
+		browser = browser.toLowerCase();
 
 		if (browser.equals("edge")) {
 			driver = new EdgeDriver();
@@ -52,9 +51,6 @@ public class TestBase {
 
 		driver.get(properties.getProperty("url"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
-	}
-	 
-	 
-
+}

@@ -11,6 +11,7 @@ public class Constant {
 	
 	public static final String SAVED = "Saved!";
 	public static final String PLACEMENT_OFFICER = "Placement";
+	public static final String USERNAME_REQUIRED = "Username is required.";
 
 	public static String USERS = "Users";
 	public static String LEARNERS = "Learners";

@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import javax.xml.xpath.XPath;
 
 import org.ictak.pages.Navigator;
+import org.ictak.pages.LearnersForm;
 import org.ictak.pages.Login;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -26,6 +27,7 @@ public class Util {
 		String UserName = ExcelUtility.getData(row, 0);
 		String Password = ExcelUtility.getData(row, 1);
 		log.setUser(UserName);
+
 		log.setPassword(Password);
 		System.out.println("*****Hello, ready for Testing*******");
 
@@ -114,4 +116,72 @@ public class Util {
 		elmnt.click();
 	}
 
+	public static LearnersForm findLerner(WebDriver driver, String learnerId, boolean deletePresent) {
+		LearnersForm objLerner = null;
+		List<WebElement> pagination = driver.findElements(By.xpath("//li[@class='page-item']"));
+		boolean found = false;
+		for (WebElement index : pagination) {
+			Util.sleepForMilliSec(2000);
+			WebElement table = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover']"));
+			List<WebElement> rows = table.findElements(By.tagName("tr"));
+			System.out.println("Row size = " + rows.size());
+
+			List<WebElement> editButtons = null;
+			List<WebElement> deleteButtons = null;
+
+			if (deletePresent) {
+				editButtons = table.findElements(By.xpath("//button[@class='btn btn-success']"));
+				deleteButtons = table.findElements(By.xpath("//button[@class='btn btn-danger']"));
+			} else {
+				editButtons = table.findElements(By.xpath("//button[@class='btn btn-success btn btn-primary']"));
+			}
+
+			int i = 0;
+			boolean header = true;
+			for (WebElement row : rows) {
+				if (header) {
+					header = false;
+					continue;
+				}
+				System.out.println("Row  = " + row.getText());
+				LearnersForm learner = null;
+				if (deletePresent) {
+					learner = new LearnersForm(driver, row, editButtons.get(i), deleteButtons.get(i));
+				} else {
+					learner = new LearnersForm(driver, row, editButtons.get(i));
+				}
+				i++;
+				System.out.println(learner);
+				if (learnerId.equals(learner.getLearnerId())) {
+					objLerner = learner;
+					found = true;
+					break;
+				}
+			}
+			if (found)
+				break;
+			index.click();
+		}
+
+		return objLerner;
+	}
+
+//	public static void waitForClickability(WebDriver driver, WebElement element) {
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.elementToBeClickable(element));
+//	}
+
+//	public static void waitUntilVisible(WebDriver driver, WebElement element) {
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.visibilityOf(element));
+//	}
+	public static WebElement waitForClickability(WebDriver driver, By locatior) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		return wait.until(ExpectedConditions.elementToBeClickable(locatior));
+	}
+
+	public static WebElement waitUntilVisible(WebDriver driver, By locatior) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locatior));
+	}
 }

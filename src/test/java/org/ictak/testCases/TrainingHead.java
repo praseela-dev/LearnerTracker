@@ -6,6 +6,7 @@ import org.ictak.pages.Learners;
 import org.ictak.pages.LearnersForm;
 import org.ictak.pages.Login;
 import org.ictak.pages.Navigator;
+import org.ictak.pages.Placement;
 import org.ictak.utilities.ExcelUtility;
 import org.ictak.utilities.Util;
 import org.testng.Assert;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class TrainingHead extends TestBase {
 
-	@Test(priority = 0)
+	@Test(priority = 10)
 
 	public void trainingHeadAddLearner_TC_34() {
 
@@ -55,7 +56,7 @@ public class TrainingHead extends TestBase {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 11)
 
 	public void trainingHeadBulkUpdate_TC_42() {
 
@@ -89,7 +90,7 @@ public class TrainingHead extends TestBase {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 12)
 
 	public void trainingHeadAddLearnerBlankProject_TC_41() {
 
@@ -129,7 +130,7 @@ public class TrainingHead extends TestBase {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 13)
 
 	public void trainingHeadAddLearnerInvalidName_TC_38() {
 
@@ -168,4 +169,77 @@ public class TrainingHead extends TestBase {
 			e.printStackTrace();
 		}
 	}
-}
+
+	@Test(priority = 14)
+	public void updateLearner_TC_49() {
+
+		Navigator objDashBoard = new Navigator(driver);
+		Login log;
+		try {
+			log = Util.setLoginFields(driver, 1);
+			Util.sleepForMilliSec(2000);
+			log.loginclick();
+			Util.sleepForMilliSec(2000);
+			String actualResult = objDashBoard.getUserTitle();
+			System.out.println("This is Actual Result : " + actualResult);
+			Assert.assertEquals(actualResult, Constant.LEARNERS);
+
+			Thread.sleep(2000);
+//			Learners objLearner = objDashBoard.learners();
+			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
+			objFoarm.navigateToEdit();
+			objFoarm.setCourse(ExcelUtility.getTestData(1, "TC_49", 3));
+			objFoarm.setProject(ExcelUtility.getTestData(1, "TC_49", 4));
+			objFoarm.setCourseStatus(ExcelUtility.getTestData(1, "TC_49", 6));
+
+			objFoarm.clickSubmit();
+
+//			Assert.assertEquals(Util.getMessage(driver), Constant.SUCESS_MSG);
+//
+//			Util.sleepForMilliSec(2000);
+//			Util.presOK(driver);
+//			Util.sleepForMilliSec(2000);
+
+			objDashBoard.logout();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Test(priority = 15)
+	public void deleteLearner_TC_50() {
+
+		Navigator objDashBoard = new Navigator(driver);
+		Login log;
+		try {
+			log = Util.setLoginFields(driver, 1);
+
+			log.loginclick();
+			Util.sleepForMilliSec(2000);
+			String actualResult = objDashBoard.getUserTitle();
+			System.out.println("This is Actual Result : " + actualResult);
+			Assert.assertEquals(actualResult, Constant.LEARNERS);
+
+			Thread.sleep(2000);
+//			Learners objLearner = objDashBoard.learners();
+			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
+			objFoarm.delete();
+
+			objFoarm.clickSubmit();
+
+//			Assert.assertEquals(Util.getMessage(driver), Constant.SUCESS_MSG);
+//
+//			Util.sleepForMilliSec(2000);
+//			Util.presOK(driver);
+//			Util.sleepForMilliSec(2000);
+
+			objDashBoard.logout();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}}
+

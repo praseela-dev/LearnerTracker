@@ -20,13 +20,19 @@ public class LearnersForm extends PageBase {
 //	private WebElement submitButton;
 
 	private WebElement updateButton;
+	private WebElement deleteButton;
 
 	public LearnersForm(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 
-	public LearnersForm(WebDriver driver, WebElement row,WebElement button ) {
+	public LearnersForm(WebDriver driver, WebElement row, WebElement updateButton, WebElement deleteButton) {
+		this(driver, row, updateButton);
+		this.deleteButton = deleteButton;
+	}
+
+	public LearnersForm(WebDriver driver, WebElement row, WebElement updateButton) {
 		super(driver);
 		List<WebElement> children = row.findElements(By.tagName("td"));
 		if (children.size() > 0) {
@@ -39,7 +45,7 @@ public class LearnersForm extends PageBase {
 			courseStatus = children.get(i++).getText();
 			placementStatus = children.get(i++).getText();
 
-			updateButton = button;
+			this.updateButton = updateButton;
 //			updateButton = row.findElement(By.xpath("//button[@class='btn btn-success btn btn-primary']"));
 //			deleteButton = row.findElement(By.xpath("//button[@class='btn btn-danger btn btn-primary']"));
 		}
@@ -130,7 +136,9 @@ public class LearnersForm extends PageBase {
 	public void navigateToEdit() {
 		updateButton.click();
 	}
-
+	public void delete() {
+		deleteButton.click();
+	}
 	public void clickSubmit() {
 		WebElement elmnt = driver.findElement(By.xpath("//button[@class='btn btn-success']"));
 		elmnt.click();
@@ -140,12 +148,12 @@ public class LearnersForm extends PageBase {
 		WebElement elmnt = driver.findElement(By.xpath("//p[@class='fw-light fst-italic text-start text-danger']"));
 		return elmnt.getText();
 	}
-	
+
 	public void clickBackDashb() {
 		WebElement elmnt = driver.findElement(By.xpath("//button[@class='btn btn-warning']"));
 		elmnt.click();
 	}
-	
+
 	@Override
 	public String toString() {
 		return "LearnersForm [learnerId=" + learnerId + ", name=" + name + ", course=" + course + ", project=" + project
