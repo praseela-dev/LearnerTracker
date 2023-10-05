@@ -2,84 +2,84 @@
 <testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-03T01:26:00 IST" name="Default suite" finished-at="2023-10-03T01:30:30 IST" duration-ms="270102">
+  <suite started-at="2023-10-05T19:07:54 IST" name="Default suite" finished-at="2023-10-05T19:11:06 IST" duration-ms="192291">
     <groups>
     </groups>
-    <test started-at="2023-10-03T01:26:00 IST" name="Default test" finished-at="2023-10-03T01:30:30 IST" duration-ms="270102">
+    <test started-at="2023-10-05T19:07:54 IST" name="Default test" finished-at="2023-10-05T19:11:06 IST" duration-ms="192291">
       <class name="org.ictak.testCases.TestBase">
-        <test-method is-config="true" signature="init()[pri:0, instance:org.ictak.testCases.TestBase@206a70ef]" started-at="2023-10-03T01:25:55 IST" name="init" finished-at="2023-10-03T01:26:00 IST" duration-ms="5421" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:org.ictak.testCases.TestBase@206a70ef]" started-at="2023-10-05T19:07:48 IST" name="init" finished-at="2023-10-05T19:07:54 IST" duration-ms="6157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- org.ictak.testCases.TestBase -->
       <class name="org.ictak.testCases.LoginTest">
-        <test-method signature="validAdminLogin_TC_2()[pri:0, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-03T01:26:00 IST" name="validAdminLogin_TC_2" finished-at="2023-10-03T01:26:10 IST" duration-ms="10058" status="PASS">
+        <test-method signature="validAdminLogin_TC_2()[pri:0, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-05T19:07:54 IST" name="validAdminLogin_TC_2" finished-at="2023-10-05T19:08:04 IST" duration-ms="9932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validAdminLogin_TC_2 -->
-        <test-method signature="verifyValidAdminAndInvalidPasswd_TC_3()[pri:1, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-03T01:26:10 IST" name="verifyValidAdminAndInvalidPasswd_TC_3" finished-at="2023-10-03T01:26:18 IST" duration-ms="8063" status="PASS">
+        <test-method signature="verifyValidAdminAndInvalidPasswd_TC_3()[pri:1, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-05T19:08:04 IST" name="verifyValidAdminAndInvalidPasswd_TC_3" finished-at="2023-10-05T19:08:12 IST" duration-ms="7840" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidAdminAndInvalidPasswd_TC_3 -->
-        <test-method signature="validTrainingHeadLogin_TC_10()[pri:2, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-03T01:26:18 IST" name="validTrainingHeadLogin_TC_10" finished-at="2023-10-03T01:26:26 IST" duration-ms="8099" status="PASS">
+        <test-method signature="validTrainingHeadLogin_TC_10()[pri:2, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-05T19:08:12 IST" name="validTrainingHeadLogin_TC_10" finished-at="2023-10-05T19:08:20 IST" duration-ms="8054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validTrainingHeadLogin_TC_10 -->
-        <test-method signature="validPlacementOfficerLogin_TC_17()[pri:3, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-03T01:26:26 IST" name="validPlacementOfficerLogin_TC_17" finished-at="2023-10-03T01:26:35 IST" duration-ms="8165" status="PASS">
+        <test-method signature="validPlacementOfficerLogin_TC_17()[pri:3, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-05T19:08:20 IST" name="validPlacementOfficerLogin_TC_17" finished-at="2023-10-05T19:08:28 IST" duration-ms="7951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validPlacementOfficerLogin_TC_17 -->
-        <test-method signature="verifyBlankAdminAndValidPasswd_TC_6()[pri:4, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-03T01:26:35 IST" name="verifyBlankAdminAndValidPasswd_TC_6" finished-at="2023-10-03T01:26:39 IST" duration-ms="4283" status="PASS">
+        <test-method signature="verifyBlankAdminAndValidPasswd_TC_6()[pri:4, instance:org.ictak.testCases.LoginTest@815b41f]" started-at="2023-10-05T19:08:28 IST" name="verifyBlankAdminAndValidPasswd_TC_6" finished-at="2023-10-05T19:08:32 IST" duration-ms="4235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBlankAdminAndValidPasswd_TC_6 -->
       </class> <!-- org.ictak.testCases.LoginTest -->
       <class name="org.ictak.testCases.PlacementOfficer">
-        <test-method signature="updatePlacementStatus_TC_46()[pri:9, instance:org.ictak.testCases.PlacementOfficer@1573f9fc]" started-at="2023-10-03T01:28:42 IST" name="updatePlacementStatus_TC_46" finished-at="2023-10-03T01:29:08 IST" duration-ms="25813" status="PASS">
+        <test-method signature="updatePlacementStatus_TC_46()[pri:9, instance:org.ictak.testCases.PlacementOfficer@1573f9fc]" started-at="2023-10-05T19:09:28 IST" name="updatePlacementStatus_TC_46" finished-at="2023-10-05T19:09:37 IST" duration-ms="9077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatePlacementStatus_TC_46 -->
       </class> <!-- org.ictak.testCases.PlacementOfficer -->
       <class name="org.ictak.testCases.AdminTest">
-        <test-method signature="addAdminUser_TC_24()[pri:5, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-03T01:26:39 IST" name="addAdminUser_TC_24" finished-at="2023-10-03T01:26:53 IST" duration-ms="14359" status="PASS">
+        <test-method signature="addAdminUser_TC_24()[pri:5, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-05T19:08:32 IST" name="addAdminUser_TC_24" finished-at="2023-10-05T19:08:46 IST" duration-ms="14021" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAdminUser_TC_24 -->
-        <test-method signature="adminTask_backtoDashboard_TC_35()[pri:6, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-03T01:26:53 IST" name="adminTask_backtoDashboard_TC_35" finished-at="2023-10-03T01:27:08 IST" duration-ms="14263" status="PASS">
+        <test-method signature="adminTask_backtoDashboard_TC_35()[pri:6, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-05T19:08:46 IST" name="adminTask_backtoDashboard_TC_35" finished-at="2023-10-05T19:09:00 IST" duration-ms="13719" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminTask_backtoDashboard_TC_35 -->
-        <test-method signature="editUserAdmin_TC_25()[pri:7, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-03T01:27:08 IST" name="editUserAdmin_TC_25" finished-at="2023-10-03T01:27:56 IST" duration-ms="48028" status="PASS">
+        <test-method signature="editUserAdmin_TC_25()[pri:7, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-05T19:09:00 IST" name="editUserAdmin_TC_25" finished-at="2023-10-05T19:09:15 IST" duration-ms="15278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editUserAdmin_TC_25 -->
-        <test-method signature="deleteAdmin_TC_26()[pri:8, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-03T01:27:56 IST" name="deleteAdmin_TC_26" finished-at="2023-10-03T01:28:42 IST" duration-ms="46758" status="PASS">
+        <test-method signature="deleteAdmin_TC_26()[pri:8, instance:org.ictak.testCases.AdminTest@5542c4ed]" started-at="2023-10-05T19:09:15 IST" name="deleteAdmin_TC_26" finished-at="2023-10-05T19:09:28 IST" duration-ms="13488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAdmin_TC_26 -->
       </class> <!-- org.ictak.testCases.AdminTest -->
       <class name="org.ictak.testCases.TrainingHead">
-        <test-method signature="trainingHeadAddLearner_TC_34()[pri:10, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-03T01:29:08 IST" name="trainingHeadAddLearner_TC_34" finished-at="2023-10-03T01:29:22 IST" duration-ms="14073" status="PASS">
+        <test-method signature="trainingHeadAddLearner_TC_34()[pri:10, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-05T19:09:37 IST" name="trainingHeadAddLearner_TC_34" finished-at="2023-10-05T19:10:01 IST" duration-ms="23225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainingHeadAddLearner_TC_34 -->
-        <test-method signature="trainingHeadBulkUpdate_TC_42()[pri:11, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-03T01:29:22 IST" name="trainingHeadBulkUpdate_TC_42" finished-at="2023-10-03T01:29:36 IST" duration-ms="13341" status="PASS">
+        <test-method signature="trainingHeadBulkUpdate_TC_42()[pri:11, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-05T19:10:01 IST" name="trainingHeadBulkUpdate_TC_42" finished-at="2023-10-05T19:10:09 IST" duration-ms="8827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainingHeadBulkUpdate_TC_42 -->
-        <test-method signature="trainingHeadAddLearnerBlankProject_TC_41()[pri:12, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-03T01:29:36 IST" name="trainingHeadAddLearnerBlankProject_TC_41" finished-at="2023-10-03T01:29:49 IST" duration-ms="13320" status="PASS">
+        <test-method signature="trainingHeadAddLearnerBlankProject_TC_41()[pri:12, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-05T19:10:09 IST" name="trainingHeadAddLearnerBlankProject_TC_41" finished-at="2023-10-05T19:10:23 IST" duration-ms="13579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainingHeadAddLearnerBlankProject_TC_41 -->
-        <test-method signature="trainingHeadAddLearnerInvalidName_TC_38()[pri:13, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-03T01:29:49 IST" name="trainingHeadAddLearnerInvalidName_TC_38" finished-at="2023-10-03T01:30:02 IST" duration-ms="13313" status="PASS">
+        <test-method signature="trainingHeadAddLearnerInvalidName_TC_38()[pri:13, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-05T19:10:23 IST" name="trainingHeadAddLearnerInvalidName_TC_38" finished-at="2023-10-05T19:10:38 IST" duration-ms="15096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trainingHeadAddLearnerInvalidName_TC_38 -->
-        <test-method signature="updateLearner_TC_49()[pri:14, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-03T01:30:02 IST" name="updateLearner_TC_49" finished-at="2023-10-03T01:30:20 IST" duration-ms="17767" status="PASS">
+        <test-method signature="updateLearner_TC_49()[pri:14, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-05T19:10:38 IST" name="updateLearner_TC_49" finished-at="2023-10-05T19:10:54 IST" duration-ms="16218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateLearner_TC_49 -->
-        <test-method signature="deleteLearner_TC_50()[pri:15, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-03T01:30:20 IST" name="deleteLearner_TC_50" finished-at="2023-10-03T01:30:30 IST" duration-ms="10286" status="PASS">
+        <test-method signature="deleteLearner_TC_50()[pri:15, instance:org.ictak.testCases.TrainingHead@6150c3ec]" started-at="2023-10-05T19:10:54 IST" name="deleteLearner_TC_50" finished-at="2023-10-05T19:11:06 IST" duration-ms="11674" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteLearner_TC_50 -->

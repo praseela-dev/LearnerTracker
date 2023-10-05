@@ -102,7 +102,9 @@ public class AdminTest extends TestBase {
 			e.printStackTrace();
 		}
 		Users objUsers = new Users(driver);
-		User objUser = objUsers.findUser(ExcelUtility.getTestData(1, "TC_25", 3));
+//		User objUser = objUsers.findUser(ExcelUtility.getTestData(1, "TC_25", 3));
+		User objUser = objUsers.findFistUser();
+		
 		AddUsers updateUser = objUser.navigateToUpdate();
 		System.out.println("Print UPdate User...");
 		updateUser.setRole(ExcelUtility.getTestData(1, "TC_25", 5));
@@ -134,7 +136,8 @@ public class AdminTest extends TestBase {
 		Util.sleepForMilliSec(2000);
 
 		Users objUsers = new Users(driver);
-		User objUser = objUsers.findUser(ExcelUtility.getTestData(1, "TC_26", 3));
+//		User objUser = objUsers.findUser(ExcelUtility.getTestData(1, "TC_26", 3));
+		User objUser = objUsers.findFistUser();
 		objUser.delete();
 
 		try {

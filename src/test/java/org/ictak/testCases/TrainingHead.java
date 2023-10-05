@@ -186,7 +186,8 @@ public class TrainingHead extends TestBase {
 
 			Thread.sleep(2000);
 //			Learners objLearner = objDashBoard.learners();
-			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
+//			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
+			LearnersForm objFoarm = Util.findFirstLerner(driver, true); 
 			objFoarm.navigateToEdit();
 			objFoarm.setCourse(ExcelUtility.getTestData(1, "TC_49", 3));
 			objFoarm.setProject(ExcelUtility.getTestData(1, "TC_49", 4));
@@ -198,7 +199,7 @@ public class TrainingHead extends TestBase {
 //
 //			Util.sleepForMilliSec(2000);
 //			Util.presOK(driver);
-//			Util.sleepForMilliSec(2000);
+			Util.sleepForMilliSec(2000);
 
 			objDashBoard.logout();
 
@@ -211,6 +212,8 @@ public class TrainingHead extends TestBase {
 	@Test(priority = 15)
 	public void deleteLearner_TC_50() {
 
+		Util.sleepForMilliSec(2000);
+		
 		Navigator objDashBoard = new Navigator(driver);
 		Login log;
 		try {
@@ -223,11 +226,9 @@ public class TrainingHead extends TestBase {
 			Assert.assertEquals(actualResult, Constant.LEARNERS);
 
 			Thread.sleep(2000);
-//			Learners objLearner = objDashBoard.learners();
-			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
+//			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
+			LearnersForm objFoarm = Util.findFirstLerner(driver, true); 
 			objFoarm.delete();
-
-			objFoarm.clickSubmit();
 
 //			Assert.assertEquals(Util.getMessage(driver), Constant.SUCESS_MSG);
 //

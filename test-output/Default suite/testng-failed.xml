@@ -12,6 +12,13 @@
           <include name="deleteAdmin_TC_26"/>
         </methods>
       </class> <!-- org.ictak.testCases.AdminTest -->
+      <class name="org.ictak.testCases.LoginTest">
+        <methods>
+          <include name="init"/>
+          <include name="verifyBlankAdminAndValidPasswd_TC_6"/>
+          <include name="verifyValidAdminAndInvalidPasswd_TC_3"/>
+        </methods>
+      </class> <!-- org.ictak.testCases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

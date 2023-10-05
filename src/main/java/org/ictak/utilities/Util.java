@@ -166,6 +166,47 @@ public class Util {
 		return objLerner;
 	}
 
+	public static LearnersForm findFirstLerner(WebDriver driver, boolean deletePresent) {
+		LearnersForm objLerner = null;
+		Util.sleepForMilliSec(2000);
+		WebElement table = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover']"));
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+		System.out.println("Row size = " + rows.size());
+
+		List<WebElement> editButtons = null;
+		List<WebElement> deleteButtons = null;
+
+		if (deletePresent) {
+			editButtons = table.findElements(By.xpath("//button[@class='btn btn-success']"));
+			deleteButtons = table.findElements(By.xpath("//button[@class='btn btn-danger']"));
+		} else {
+			editButtons = table.findElements(By.xpath("//button[@class='btn btn-success btn btn-primary']"));
+		}
+
+		int i = 0;
+		boolean header = true;
+		for (WebElement row : rows) {
+			if (header) {
+				header = false;
+				continue;
+			}
+			System.out.println("Row  = " + row.getText());
+			LearnersForm learner = null;
+			if (deletePresent) {
+				learner = new LearnersForm(driver, row, editButtons.get(i), deleteButtons.get(i));
+			} else {
+				learner = new LearnersForm(driver, row, editButtons.get(i));
+			}
+			i++;
+			System.out.println(learner);
+
+			objLerner = learner;
+			break;
+		}
+
+		return objLerner;
+	}
+
 //	public static void waitForClickability(WebDriver driver, WebElement element) {
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //		wait.until(ExpectedConditions.elementToBeClickable(element));

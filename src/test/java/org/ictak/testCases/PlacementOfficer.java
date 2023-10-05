@@ -11,8 +11,8 @@ import org.ictak.utilities.Util;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PlacementOfficer extends TestBase{
-	
+public class PlacementOfficer extends TestBase {
+
 	@Test(priority = 9)
 	public void updatePlacementStatus_TC_46() {
 
@@ -28,7 +28,8 @@ public class PlacementOfficer extends TestBase{
 
 			Thread.sleep(2000);
 			Placement objPlacement = objDashBoard.placement();
-			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_46", 1), false); 
+//			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_46", 1), false); 
+			LearnersForm objFoarm = Util.findFirstLerner(driver, false);
 			objFoarm.navigateToEdit();
 			objFoarm.setPlacementStatus(ExcelUtility.getTestData(1, "TC_46", 2));
 
@@ -42,6 +43,5 @@ public class PlacementOfficer extends TestBase{
 		}
 
 	}
-
 
 }
