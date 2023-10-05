@@ -12,6 +12,9 @@ public class Constant {
 	public static final String SAVED = "Saved!";
 	public static final String PLACEMENT_OFFICER = "Placement";
 	public static final String USERNAME_REQUIRED = "Username is required.";
+	public static final String USER_BLANK_ERROR = "Must be a valid Email ID";
+	public static final String USER_INVALID_USERNAME = "Must be min 5 characters with alphabets and numbers only";
+	public static final String PLACEMENT = "Placement";
 
 	public static String USERS = "Users";
 	public static String LEARNERS = "Learners";

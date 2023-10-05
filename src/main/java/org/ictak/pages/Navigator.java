@@ -18,7 +18,7 @@ public class Navigator extends PageBase {
 	}
 
 	public String getUserTitle() {
-//		WebElement element = driver.findElement(By.className("item-content"));
+		
 		WebElement element = Util.waitUntilVisible(driver, By.className("item-content"));
 		return element.getText();
 
@@ -29,6 +29,19 @@ public class Navigator extends PageBase {
 		return new Users(driver);
 	}
 
+	public void clickLearner() {
+		WebElement elmnt = Util.findFirstMatchingListElement(driver, "//span[@class='item-content']",
+				Constant.LEARNERS);
+		elmnt.click();
+	}
+
+	public void clickPlacement() {
+		WebElement elmnt = Util.findFirstMatchingListElement(driver, "//span[@class='item-content']",
+				Constant.PLACEMENT );
+		elmnt.click();
+	}
+	
+	
 	public Learners learners() {
 		driver.findElement(By.xpath("//span[@class='item-content']")).click();
 		return new Learners(driver);
@@ -37,19 +50,15 @@ public class Navigator extends PageBase {
 	public Placement placement() {
 		driver.findElement(By.xpath("//span[@class='item-content']")).click();
 		return new Placement(driver);
-
 	}
 
 	@AfterMethod
 	public Login logout() {
 
-//		WebElement dropDown = driver.findElement(By.id("basic-nav-dropdown"));
 		WebElement dropDown = Util.waitUntilVisible(driver, By.id("basic-nav-dropdown"));
-
 		dropDown.click();
-//		WebElement parent = driver.findElement(By.xpath("//div[@class='me-5 pe-5 nav-item show dropdown']"));
-		WebElement parent = Util.waitUntilVisible(driver, By.xpath("//div[@class='me-5 pe-5 nav-item show dropdown']"));
 
+		WebElement parent = Util.waitUntilVisible(driver, By.xpath("//div[@class='me-5 pe-5 nav-item show dropdown']"));
 		WebElement logoutButton = Util.findFirstMatchingListElement(driver, parent, "//a[@class='dropdown-item' ]",
 				Constant.LOGOUT);
 		logoutButton.click();

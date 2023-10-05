@@ -51,6 +51,11 @@ public class AddUsers extends PageBase {
 	}
 	
 	
+	public String getBlankFieldErrMessage() {
+		WebElement elmnt = driver.findElement(By.xpath("//p[@class='fw-light fst-italic text-start text-danger']"));
+		return elmnt.getText();
+	}
+	
 
 //	public String getMessage() {
 //		WebElement elmnt = driver.findElement(By.xpath("//div[@id='swal2-html-container']"));

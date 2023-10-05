@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class TrainingHead extends TestBase {
 
-	@Test(priority = 10)
+	@Test(priority = 14)
 
 	public void trainingHeadAddLearner_TC_34() {
 
@@ -56,7 +56,7 @@ public class TrainingHead extends TestBase {
 
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 15)
 
 	public void trainingHeadBulkUpdate_TC_42() {
 
@@ -90,7 +90,7 @@ public class TrainingHead extends TestBase {
 
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 16)
 
 	public void trainingHeadAddLearnerBlankProject_TC_41() {
 
@@ -130,7 +130,7 @@ public class TrainingHead extends TestBase {
 		}
 	}
 
-	@Test(priority = 13)
+	@Test(priority = 17)
 
 	public void trainingHeadAddLearnerInvalidName_TC_38() {
 
@@ -170,7 +170,7 @@ public class TrainingHead extends TestBase {
 		}
 	}
 
-	@Test(priority = 14)
+	@Test(priority = 18)
 	public void updateLearner_TC_49() {
 
 		Navigator objDashBoard = new Navigator(driver);
@@ -209,7 +209,7 @@ public class TrainingHead extends TestBase {
 		}
 	}
 
-	@Test(priority = 15)
+	@Test(priority = 19)
 	public void deleteLearner_TC_50() {
 
 		Util.sleepForMilliSec(2000);
@@ -226,16 +226,10 @@ public class TrainingHead extends TestBase {
 			Assert.assertEquals(actualResult, Constant.LEARNERS);
 
 			Thread.sleep(2000);
-//			LearnersForm objFoarm = Util.findLerner(driver, ExcelUtility.getTestData(1, "TC_49", 1), true); 
 			LearnersForm objFoarm = Util.findFirstLerner(driver, true); 
 			objFoarm.delete();
-
-//			Assert.assertEquals(Util.getMessage(driver), Constant.SUCESS_MSG);
-//
-//			Util.sleepForMilliSec(2000);
-//			Util.presOK(driver);
-//			Util.sleepForMilliSec(2000);
-
+			
+			Util.sleepForMilliSec(2000);
 			objDashBoard.logout();
 
 		} catch (Exception e) {

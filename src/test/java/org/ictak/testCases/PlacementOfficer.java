@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class PlacementOfficer extends TestBase {
 
-	@Test(priority = 9)
+	@Test(priority = 13)
 	public void updatePlacementStatus_TC_46() {
 
 		Navigator objDashBoard = new Navigator(driver);
@@ -34,7 +34,7 @@ public class PlacementOfficer extends TestBase {
 			objFoarm.setPlacementStatus(ExcelUtility.getTestData(1, "TC_46", 2));
 
 			objFoarm.clickSubmit();
-
+			Util.sleepForMilliSec(2000);
 			objDashBoard.logout();
 
 		} catch (Exception e) {

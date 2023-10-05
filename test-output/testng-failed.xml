@@ -5,20 +5,17 @@
     <classes>
       <class name="org.ictak.testCases.AdminTest">
         <methods>
-          <include name="addAdminUser_TC_24"/>
+          <include name="adminAddUserBlankProject_TC_14"/>
+          <include name="adminViewUsers_TC_52"/>
           <include name="init"/>
+          <include name="addAdminUserRole_TC_24"/>
           <include name="adminTask_backtoDashboard_TC_35"/>
+          <include name="addTrainingHeadUserRole_TC_51"/>
           <include name="editUserAdmin_TC_25"/>
+          <include name="adminAddUserInvalidProject_TC_28"/>
           <include name="deleteAdmin_TC_26"/>
         </methods>
       </class> <!-- org.ictak.testCases.AdminTest -->
-      <class name="org.ictak.testCases.LoginTest">
-        <methods>
-          <include name="init"/>
-          <include name="verifyBlankAdminAndValidPasswd_TC_6"/>
-          <include name="verifyValidAdminAndInvalidPasswd_TC_3"/>
-        </methods>
-      </class> <!-- org.ictak.testCases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
